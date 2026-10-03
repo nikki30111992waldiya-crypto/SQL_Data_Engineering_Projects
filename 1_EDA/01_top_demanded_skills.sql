@@ -8,7 +8,7 @@ Question: What are the most in-demand skills for data engineers?
 */
 
 SELECT 
-    sd.skills,
+    sd.skills as Skill,
     COUNT(jpf.*) AS demand_count
 FROM job_postings_fact jpf
 INNER JOIN skills_job_dim sjd ON jpf.job_id = sjd.job_id
